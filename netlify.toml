@@ -1,0 +1,57 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/sitemap_index.xml"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/wp-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/post-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/page-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/category-sitemap.xml"
+  to = "/sitemap.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/feed"
+  to = "/feed.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/feed/"
+  to = "/feed.xml"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/author/george"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/author/george/"
+  to = "/"
+  status = 301
+  force = true
+

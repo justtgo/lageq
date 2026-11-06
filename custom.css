@@ -1,0 +1,43 @@
+/* Remove meta data (from WP Customizer custom CSS) */
+.entry-meta .byline, .entry-meta .cat-links { display: none; }
+.entry-meta .posted-on { display: none; }
+.site-info { display: none; }
+
+/* Navigare articole: săgeți subțiri pe margini + tot blocul e clickabil */
+.post-navigation .nav-links .nav-previous,
+.post-navigation .nav-links .nav-next { padding: 30px 60px; display: flex; align-items: center; min-height: 110px; }
+.post-navigation .nav-links .nav-previous:after,
+.post-navigation .nav-links .nav-next:after { top: 50%; bottom: auto; transform: translateY(-50%); -webkit-transform: translateY(-50%); font-size: 22px; line-height: 1; font-weight: normal; pointer-events: none; }
+.post-navigation .nav-links .nav-previous:after { content: "\f177"; left: 20px; right: auto; }
+.post-navigation .nav-links .nav-next:after { content: "\f178"; left: auto; right: 20px; }
+.post-navigation .nav-links a { position: static; }
+.post-navigation .nav-links a:after { content: ""; position: absolute; top: 0; right: 0; bottom: 0; left: 0; z-index: 2; }
+
+/* ---------- Optimizări mobile ---------- */
+html { -webkit-text-size-adjust: 100%; }
+a, button { -webkit-tap-highlight-color: rgba(255, 170, 170, 0.35); }
+.entry-content img, .entry-content picture { max-width: 100%; height: auto; }
+.entry-content iframe { max-width: 100%; }
+.entry-content iframe[src*="youtube"] { width: 100%; height: auto; aspect-ratio: 16 / 9; }
+@media (max-width: 1049.98px) {
+  .twp-header .site-branding { padding: 72px 24px 26px; height: auto; min-height: 210px; }
+  .twp-header .site-branding .site-title { font-size: 2rem; margin-top: 0; }
+  .twp-header .site-branding .site-description { font-size: 0.95rem; line-height: 1.35; margin-top: 12px; }
+  .twp-header.data-bg { background-position: center 25%; }
+}
+@media (max-width: 575.99px) {
+  .entry-content p { font-size: 1.02rem; line-height: 1.65; }
+  .entry-content .alignleft, .entry-content .alignright { float: none; display: block; margin: 0 auto 1rem; width: 100%; max-width: 100%; height: auto; }
+  .posts-navigation a { display: block; padding: 16px 20px; }
+  .twp-gallery-grid-section span { min-width: 44px; min-height: 44px; }
+  .post-navigation .nav-links .nav-previous, .post-navigation .nav-links .nav-next { padding: 24px 48px; min-height: 96px; font-size: 0.95rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *:before, *:after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+article.twp-gallery-post { cursor: pointer; }
+
+/* SEO: un singur h1 pe pagină, cu aspectul vechi păstrat */
+p.site-title { font-size: 32px; font-weight: 700; line-height: 48px; }
+h1.entry-title { font-size: 24px; line-height: 28.8px; }
